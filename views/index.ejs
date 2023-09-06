@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+</head>
+
+<body>
+
+    <h1> My TODO</h1>
+    <div class = "box">
+    <% for (let item of tasklist ){%>
+        <div class="item">
+            <input type = "checkbox" id = "checkbox"> 
+            <label for="checkbox"><%=item%> </label>
+        </div> <%}%>
+    </div>
+    <form action = "/addtask" method = "POST"> 
+        <input type = "text" name = "newtask">
+        <button type = "submit" class = "todo-button"> Add Task </button>
+    </form>
+
+</body>
+
+</html>
